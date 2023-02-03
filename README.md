@@ -18,7 +18,7 @@ make
 - pegar o arquivo drill2ngc.sh do repositorio https://github.com/PCB-CNC/conversion-gerber/tree/test-layers/scripts_direct e jogue no diretorio de onde está o binário do gbr2ngc
 
 # Pegar o arquivo bash que executa tudo
-- pegar o arquivo convert.sh do repositorio https://github.com/PCB-CNC/conversion-gerber/tree/test-layers/scripts_direct
+- pegar o arquivo convert.sh desse repositorio e colocar onde está o binário do gbr2ngc igual o bash anterior
 
 # Como executar
 - executar o arquivo convert.sh passando como parâmetro o nome da pasta onde estão os arquivos gerber (descompactados)
