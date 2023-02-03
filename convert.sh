@@ -10,6 +10,4 @@ folder=$1
 ./gbr2ngc ${folder}/Gerber_BoardOutlineLayer.GKO --radius 0.0025 --output testOutline.ngc
 
 # Convert drill files using python script or bash script
-python3 drill.py --spindle-speed 24000 --drill-depth 3 ${folder}/Drill_PTH_Through.DRL
-python3 drill.py --spindle-speed 24000 --drill-depth 3 ${folder}/Drill_PTH_Through_Via.DRL
 ./drill2ngc.sh ${folder}/Drill_PTH_Through.DRL 0.0009 8 1 60 0.05 -0.1 holes.ngc
