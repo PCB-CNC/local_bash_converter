@@ -9,4 +9,4 @@
 zip gcode.zip gcode/*
 
 #copy the zip file to the downloads folder
-cp gcode.zip ~/Downloads/
+# cp gcode.zip ~/Downloads/
