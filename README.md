@@ -1,49 +1,38 @@
-# Como converter
-- clonar o repositório https://github.com/abetusk/gbr2ngc
+# Como converter arquivos gerber para gcode
 
-```sh
-git clone https://github.com/abetusk/gbr2ngc.git
-```
 
-- entrar no diretório do repositório onde está o Makefile
-```sh
-cd gbr2ngc/src/
-```
+## Nomes dos arquivos 
 
-- executar o comando make
-```sh
-make
-```
-# pegar arquivo de converter drill
-- Pegar o arquivo drill2ngc.sh do repositorio https://github.com/PCB-CNC/conversion-gerber/tree/test-layers/scripts_direct e jogue no diretorio de onde está o binário do gbr2ngc
+Coloque os arquivos gerber dentro da pasta gerber
 
-# Pegar o arquivo bash que executa tudo
-- Pegar o arquivo convert.sh desse repositorio e colocar onde está o binário do gbr2ngc igual o bash anterior
+Tem de estar no seguinte formato exato:
 
-# Como executar
-- Executar o arquivo convert.sh passando como parâmetro o nome da pasta onde estão os arquivos gerber (descompactados)
-```sh
-./convert.sh <nome da pasta /ou caminho da pasta>
-```
-
-# Nomes dos arquivos 
-
-Tem de estar no seguinte formato exato 
-- Gerber_BottomLayer.GBL 
 - Gerber_TopLayer.GTL 
+- Gerber_BottomLayer.GBL 
 - Gerber_BoardOutlineLayer.GKO
-- Drill_PTH_Through.DRL
-- Drill_PTH_Through_Via.DRL
 
-Copiar a pasta com os arquivo para o diretorio do binario do gbr2ngc (descompactada e com os nomes corretos)
+## Como executar
 
-Serão gerados no mesmo diretorio e com os nomes
- - testTop.ngc
- - testBottom.ngc
- - testOutline.ngc
- - holes.ngc
+Rodar o comando para dar permissão de execução
+```sh
+chmod +x convert.sh
+```
+e depois executar o arquivo
+```sh
+./convert.sh
+```
+
+ > Foi feito pensando no linux ou wsl como base
+
  
- > foi feito pensando no linux ou wsl como base
- 
- 
- > rodar chmod +x nos arquivos bash para ter permissão de executar
+
+## Resultado
+
+Após a execução do script os arquivos gcode serão gerados na pasta gcode, com os nomes abaixo:
+
+ - Top.gcode (gerado a partir do Gerber_TopLayer.GTL)
+ - Bottom.gcode (gerado a partir do Gerber_BottomLayer.GBL)
+ - Outline.gcode (gerado a partir do Gerber_BoardOutlineLayer.GKO)
+
+
+
