@@ -34,5 +34,7 @@ Após a execução do script os arquivos gcode serão gerados na pasta gcode, co
  - Bottom.gcode (gerado a partir do Gerber_BottomLayer.GBL)
  - Outline.gcode (gerado a partir do Gerber_BoardOutlineLayer.GKO)
 
+Também será gerado um arquivo chamado "gcode.zip" que é um zip da pasta gcode.
+
 
 
